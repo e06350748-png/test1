@@ -265,7 +265,8 @@ const DashboardProductDetails = ({
             type="file"
             className="file-input file-input-bordered file-input-lg w-full max-w-sm"
             onChange={(e) => {
-              const selectedFile = e.target.files[0];
+              const files = (e.target as HTMLInputElement).files;
+              const selectedFile = files && files[0];
 
               if (selectedFile) {
                 uploadFile(selectedFile);
