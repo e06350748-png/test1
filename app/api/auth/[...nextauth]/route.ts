@@ -45,7 +45,7 @@ const authOptions: NextAuthOptions = {
   ],
 
   callbacks: {
-    async signIn({ user, account }: { user: AuthUser; account: Account }) {
+    async signIn({ user, account }: { user: AuthUser; account: Account | null }) {
       if (account?.provider === "credentials") return true;
 
       // مثال لإضافة GitHub/Google signup
