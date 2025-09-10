@@ -25,7 +25,7 @@ import { useWishlistStore } from "@/app/_zustand/wishlistStore";
 
 const Header = () => {
   const { data: session, status } = useSession();
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const { wishlist, setWishlist, wishQuantity } = useWishlistStore();
 
   const handleLogout = () => {
