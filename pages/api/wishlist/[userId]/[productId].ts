@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import prisma from '../../../../../utils/db';
+import prisma from '@/utils/db';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId, productId } = req.query as { userId: string; productId: string };
